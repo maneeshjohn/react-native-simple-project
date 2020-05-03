@@ -13,7 +13,7 @@ const UserDetails = ({ user }: Props) => {
   const { container, headerText, userCard, cardName, cardEmail, profile, profileContainer } = styles
 
   return (
-    <View style={container}>
+    <View style={container} testID="user-wrapper">
       <View style={ profileContainer }>
         <Image style={ profile } source={{ uri: user.picture.medium }} />
       </View>
