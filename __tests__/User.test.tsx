@@ -5,7 +5,32 @@ import User from '../screens/User'
 import { shallow } from 'enzyme'
 
 const mockStore = configureMockStore()
-const store = mockStore({})
+const store = mockStore({
+  user: {
+    name: {
+      first: '',
+      last: ''
+    },
+    email: '',
+    phone: '',
+    cell: '',
+    login: {
+      username: ''
+    },
+    picture: {
+      thumbnail: '',
+      medium: ''
+    },
+    dob: {
+      age: ''
+    },
+    location: {
+      city: '',
+      country: '',
+      state: ''
+    }
+  }
+})
 
 const createTestProps = (props: Object) => ({
   navigation: {
@@ -17,7 +42,7 @@ const createTestProps = (props: Object) => ({
 describe('Users screen', () => {
   describe('rendering', () => {
 
-    const props = createTestProps({ user: { name: { first: '', last: '' } } })
+    const props = createTestProps({})
     const wrapper = shallow(
       <Provider store={store}>
         <User { ...props } />

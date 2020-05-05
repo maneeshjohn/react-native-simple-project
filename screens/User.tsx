@@ -8,7 +8,7 @@ type Props = {
   user: User
 }
 
-const UserDetails = ({ user }: Props) => {
+export const UserDetails = ({ user }: Props) => {
 
   const { container, headerText, userCard, cardName, cardEmail, profile, profileContainer } = styles
 
